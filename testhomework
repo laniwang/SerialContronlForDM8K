@@ -1,0 +1,36 @@
+class Parent(object):
+    x=1
+
+class Child1(Parent):
+    pass
+
+class Child2(Parent):
+    pass
+
+Child1.x=2
+Parent.x=3
+print(Parent.x)
+print(Child1.x)
+print(Child2.x)
+
+
+f=lambda a,b:a+b
+print(f([4],[1,2,3]))
+f2=[lambda z=1:z*2, lambda z:z**2]
+print('f2: 1 ')
+print(f2[1])
+print('f2:  ')
+print((f2[0](1)))
+print(f2[1](f2[0](1)))
+
+x=[1,2,3]
+def f3(x):
+    x=x+[4]
+f3(x)
+print(x)
+
+x=[1,2,3]
+def f4(x):
+    x+=[4]
+f4(x)
+print(x)
